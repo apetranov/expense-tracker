@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Chart as ChartJS } from 'chart.js/auto';
+import { Bar } from 'react-chartjs-2';
 import './App.css'
 
 function App() {
@@ -99,6 +101,23 @@ function App() {
         </button>
       </div>
 
+     {expenses.length > 0 &&  <div className='flex justify-center items-center '>
+       <div className='w-[60%]'>
+         <Bar
+          data={{
+            labels: expenses.map((data) => data.title),
+            datasets: [
+              {
+                label: "Expenses",
+                data: expenses.map((data) => data.amount)
+              }
+            ]
+          }}
+        />
+       </div>
+      </div>}
+      
+
       {/* Scrollable expenses list */}
       <div className="flex-1 overflow-auto p-5 space-y-5 w-full">
         {expenses.map((exp) => (
@@ -117,7 +136,7 @@ function App() {
       {/* Total at the bottom */}
       <div className="w-full">
         <h1 className="bg-green-500 text-white text-center font-bold text-2xl p-5 truncate">
-          Total: ${total}
+          Total: ${total.toFixed(2)}
         </h1>
       </div>
     </div>
