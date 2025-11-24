@@ -48,7 +48,7 @@ function App() {
       alert("Expense amount is blank!!!");
       return;
     } else if (!date) {
-      alert("Date is blank!!!");
+      alert("Date is blank!!! (if on mobile tap the blank dropdown to select a date)");
       return;
     }
 
