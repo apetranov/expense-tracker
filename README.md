@@ -4,7 +4,7 @@ An app which keeps track of expenses and shows a chart of them.
 
 # Live demo: https://expense-tracker-swart-psi-61.vercel.app
 
-# How to use
+# How to use🤔
 ## 1. Type in expense title
 ## 2. Type in expense amount
 ## 3. Select date (on mobile from the dropdown field)
