@@ -102,7 +102,7 @@ function App() {
       </div>
 
      {expenses.length > 0 &&  <div className='flex justify-center items-center '>
-       <div className='w-[60%]'>
+       <div className='md:w-[60%] w-full'>
          <Bar
           data={{
             labels: expenses.map((data) => data.title),
